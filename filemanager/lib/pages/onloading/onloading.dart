@@ -148,10 +148,7 @@ class ONLOADING extends StatelessWidget{
                         width: 122,
                         height: 122,
                         decoration: BoxDecoration( 
-                          border: Border.all(
-                            width: 1 , 
-                            color: Colors.red
-                          )
+                            color:  Color.fromARGB(0, 0, 0, 0),
                         ),
                           child: ClipOval(
                             child: Material(
