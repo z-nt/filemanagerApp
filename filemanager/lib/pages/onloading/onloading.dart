@@ -1,6 +1,5 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
+import "package:filemanager/pages/onloading/styles/style.dart";
 
 
 class ONLOADING extends StatelessWidget{
@@ -97,18 +96,9 @@ class ONLOADING extends StatelessWidget{
                               ),
                            ), 
                           ), 
-                           
-                           
-                           
-
-
-
-
-
                           ],
                         ),
                       ),
-
                       Container( 
                         width: 209,
                         height: 192,
@@ -121,20 +111,37 @@ class ONLOADING extends StatelessWidget{
                                 height: 192, 
                                 width: 208,
                               ),
-
-
-
                       ),
                       
                       Container( 
                         width: 315,
                         height: 148,
                         decoration: BoxDecoration( 
-                          border: Border.all(
-                            width: 1 , 
-                            color: Colors.red
-                          )
+                          color:  Color.fromARGB(0, 0, 0, 0),
                         ),
+                          child: Column(
+                            children:<Widget>[
+                              SizedBox(
+                                width: 248,
+                                height: 84,
+                                child: Text(
+                                  "Manage your files\nin a simple way" , 
+                                  style: textStyleOne,
+                                  textAlign: TextAlign.center,
+                                ),
+                              ) ,
+
+                              SizedBox(
+                                width: 315,
+                                height: 48,
+                                child: Text(
+                                  "You could integrate your local files with\n the files in cloud storage" , 
+                                  style: textStyleTow,
+                                  textAlign: TextAlign.center,
+                                ),
+                              ) , 
+                            ],
+                          ),
                       ),
               
                       Container( 
@@ -146,35 +153,29 @@ class ONLOADING extends StatelessWidget{
                             color: Colors.red
                           )
                         ),
+                          child: ClipOval(
+                            child: Material(
+                              color:  Color.fromARGB(255, 173, 54, 209), 
+                                  child: InkWell(
+                                    splashColor: Color.fromARGB(255, 199, 45, 178), 
+                                    onTap: (){},
+                                    child: SizedBox(
+                                      width: 100,
+                                      height: 100,
+                                      child: Icon(
+                                        Icons.arrow_right_alt_outlined,
+                                         color: Colors.white,
+                                         size: 56,
+                                         ),
+                                     ),
+                                  ),
+                            ),
+                          ),
                       )
-
-
-
               ],
             ),
-
-
-
-
-
         ),
       )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     );
   }
 }
