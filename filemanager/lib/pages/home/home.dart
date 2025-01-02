@@ -51,6 +51,7 @@ class HOMEPAGE extends StatelessWidget{
                           color: Colors.red
                         )
                       ),
+                      child: CustomCategory(),
                     ),
                   ) , 
                   Padding(

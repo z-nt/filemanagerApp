@@ -145,3 +145,42 @@ class CustomPercentProggress extends StatelessWidget {
         );
   }
 }
+
+
+class CustomCategory extends StatelessWidget {
+
+final List <String> Sections = <String> ["Docs","Images","Videos","Music"];
+final List <String> Icons = <String> [];
+
+
+
+
+@override
+  Widget build(BuildContext context) {
+      return ListView.builder(
+
+            scrollDirection: Axis.horizontal,
+            itemCount: 4,
+            itemBuilder: (BuildContext  context, index) {
+                  return Container(
+                    margin: EdgeInsets.all(12),
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        width: 1 , 
+                        color: Colors.black
+                      )
+                    ),
+                    width: 64, 
+                    height: 94, 
+                    child:Text("${Sections[index]}" )
+                  );
+                 
+                  
+            },
+          );
+        
+  }
+
+
+
+}
