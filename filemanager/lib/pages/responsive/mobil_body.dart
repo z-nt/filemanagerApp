@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import "package:flutter/rendering.dart";
 import "package:filemanager/pages/onloading/styles/style.dart";
+import "package:go_router/go_router.dart";
 
 
 
@@ -152,7 +153,9 @@ class MobilBody  extends StatelessWidget {
                               color:  Color.fromARGB(255, 173, 54, 209), 
                                   child: InkWell(
                                     splashColor: Color.fromARGB(255, 199, 45, 178), 
-                                    onTap: (){},
+                                    onTap: (){
+                                      context.go("/home");
+                                    },
                                     child: SizedBox(
                                       width: 100,
                                       height: 100,
