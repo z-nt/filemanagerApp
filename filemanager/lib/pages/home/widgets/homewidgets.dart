@@ -148,39 +148,151 @@ class CustomPercentProggress extends StatelessWidget {
 
 
 class CustomCategory extends StatelessWidget {
-
-final List <String> Sections = <String> ["Docs","Images","Videos","Music"];
-final List <String> Icons = <String> [];
-
-
-
-
 @override
   Widget build(BuildContext context) {
-      return ListView.builder(
-
-            scrollDirection: Axis.horizontal,
-            itemCount: 4,
-            itemBuilder: (BuildContext  context, index) {
-                  return Container(
-                    margin: EdgeInsets.all(12),
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                        width: 1 , 
-                        color: Colors.black
-                      )
+      return Scaffold(
+        body: Column(
+          children: <Widget>[
+            Container(
+              width: 600, 
+              decoration: BoxDecoration(),
+              child: Text("Category",textAlign: TextAlign.left,style: categoryTextStyle,),
+            ), 
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children:<Widget>[
+                Padding(
+                  padding: const EdgeInsets.all(0.0),
+                  child: SizedBox(
+                    height: 104,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children:[
+                        Padding(
+                          padding: const EdgeInsets.only(top: 8.0),
+                          child: SizedBox(
+                            child: IconButton(
+                            constraints: BoxConstraints(
+                              minWidth: 64, 
+                              minHeight: 64 , 
+                            ),
+                              onPressed: (){}, 
+                              icon: Icon(Icons.document_scanner), 
+                              color: Colors.lightGreen, 
+                              iconSize: 38,
+                              style: ButtonStyle(
+                                backgroundColor: WidgetStatePropertyAll<Color>(Color.fromARGB(95, 174, 241, 174)),
+                              ),
+                            ),
+                          ),
+                        ), 
+                        SizedBox(
+                          child: Text("Docs"),
+                        ),
+                      ],
                     ),
-                    width: 64, 
-                    height: 94, 
-                    child:Text("${Sections[index]}" )
-                  );
-                 
-                  
-            },
-          );
-        
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(0.0),
+                  child: SizedBox(
+                    height: 104,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children:[
+                        Padding(
+                          padding: const EdgeInsets.only(top: 8.0),
+                          child: SizedBox( 
+                            child: IconButton(
+                            constraints: BoxConstraints(
+                              minWidth: 64, 
+                              minHeight: 64 , 
+                            ),
+                              onPressed: (){}, 
+                              icon: Icon(Icons.image), 
+                              color: Colors.lightBlue, 
+                              iconSize: 38,
+                              style: ButtonStyle(
+                                backgroundColor: WidgetStatePropertyAll<Color>(Color.fromARGB(96, 191, 232, 255)),
+                              ),
+                            ),
+                          ),
+                        ), 
+                        SizedBox(
+                          child: Text("Image"),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(0.0),
+                  child: SizedBox(
+                    height: 104,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children:[
+                        Padding(
+                          padding: const EdgeInsets.only(top: 8.0),
+                          child: SizedBox( 
+                            child: IconButton(
+                            constraints: BoxConstraints(
+                              minWidth: 64, 
+                              minHeight: 64 , 
+                            ),
+                              onPressed: (){}, 
+                              icon: Icon(Icons.video_collection), 
+                              color: const Color.fromARGB(255, 252, 0, 0), 
+                              iconSize: 38,
+                              style: ButtonStyle(
+                                backgroundColor: WidgetStatePropertyAll<Color>(Color.fromARGB(95, 255, 191, 191)),
+                              ),
+                            ),
+                          ),
+                        ), 
+                        SizedBox(
+                          child: Text("Videos"),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(0.0),
+                  child: SizedBox(
+                    height: 104,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children:[
+                        Padding(
+                          padding: const EdgeInsets.only(top: 8.0),
+                          child: SizedBox( 
+                            child: IconButton(
+                            constraints: BoxConstraints(
+                              minWidth: 64, 
+                              minHeight: 64 , 
+                            ),
+                              onPressed: (){}, 
+                              icon: Icon(Icons.music_note), 
+                              color: const Color.fromARGB(255, 252, 134, 0), 
+                              iconSize: 38,
+                              style: ButtonStyle(
+                                backgroundColor: WidgetStatePropertyAll<Color>(Color.fromARGB(95, 255, 227, 191)),
+                              ),
+                            ),
+                          ),
+                        ), 
+                        SizedBox(
+                          child: Text("Music"),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            )
+          ],
+      ));
   }
-
-
-
 }

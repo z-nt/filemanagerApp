@@ -12,3 +12,9 @@ const percentTextStyle = TextStyle(
   fontWeight:FontWeight.w900 , 
   color: Colors.black ,   
 ); 
+
+const categoryTextStyle= TextStyle(
+ fontSize: 24 , 
+  fontWeight: FontWeight.normal , 
+  fontFamily: "Manrope",
+);

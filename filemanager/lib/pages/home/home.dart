@@ -44,13 +44,8 @@ class HOMEPAGE extends StatelessWidget{
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
-                      height: 144,
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          width: 1 , 
-                          color: Colors.red
-                        )
-                      ),
+                      height: 164,
+                      decoration: BoxDecoration(),
                       child: CustomCategory(),
                     ),
                   ) , 
