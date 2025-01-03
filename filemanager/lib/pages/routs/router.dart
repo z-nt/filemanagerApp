@@ -8,7 +8,7 @@ import "package:filemanager/pages/onloading/onloading.dart";
 
 
 final GoRouter router = GoRouter(
-    initialLocation: "/home",
+    initialLocation: "/onloading",
   routes: <RouteBase>[
     
     GoRoute(
