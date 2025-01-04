@@ -19,7 +19,7 @@ class DesktopBody  extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-               Container(
+            Container(
                           constraints: BoxConstraints(
                             maxWidth: 264
                           ),            
@@ -86,10 +86,7 @@ class DesktopBody  extends StatelessWidget {
                             ],
                           ),
                         ),
-
-
-
-                        Container( 
+            Container( 
                           width: 209,
                           height: 192,
                           decoration: BoxDecoration( 
@@ -102,8 +99,7 @@ class DesktopBody  extends StatelessWidget {
                                   width: 208,
                                 ),
                         ),
-
-                      Container( 
+            Container( 
                       
                         height: 208,
                         decoration: BoxDecoration( 
@@ -139,7 +135,7 @@ class DesktopBody  extends StatelessWidget {
                             ],
                           ),
                       ),
-                       Container( 
+            Container( 
                         width: 122,
                         height: 122,
                         decoration: BoxDecoration( 

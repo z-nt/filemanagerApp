@@ -101,8 +101,7 @@ class CustomPercentProggress extends StatelessWidget {
                           children: <Widget>[
                             SizedBox(
                                 width: 322, 
-                                height: 48,
-                                
+                                height: 38,
                                   child: Text(
                                     "289GB\nFree" , 
                                     textAlign: TextAlign.left, 
@@ -113,7 +112,7 @@ class CustomPercentProggress extends StatelessWidget {
                           CircularPercentIndicator(
                             backgroundColor: Color.fromARGB(222, 222, 222,222),
                             startAngle: 360,
-                            radius: 124.0,
+                            radius: 112.0,
                             lineWidth: 24.0,
                             animation: true, 
                             percent:0.75 ,
@@ -130,7 +129,7 @@ class CustomPercentProggress extends StatelessWidget {
                           ), 
                            SizedBox(
                                 width: 322, 
-                                height: 48,
+                                height: 38,
                                   child: Text(
                                     "785GB\nused" , 
                                     textAlign: TextAlign.right,
@@ -312,7 +311,7 @@ class CustomRecentWidgets extends StatelessWidget{
             child: Container(
               decoration: BoxDecoration(),
               height: 30,
-              width: double.infinity,
+              width: 375,
               child: Text("Recent",style: titleSyle,),
             ),
           ),
@@ -320,7 +319,7 @@ class CustomRecentWidgets extends StatelessWidget{
             padding: const EdgeInsets.only(top: 24.0),
             child: Container(
               height: 88,
-              width: double.infinity,
+              width: 375,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.all(
@@ -336,7 +335,7 @@ class CustomRecentWidgets extends StatelessWidget{
                   ]
                 ),
                 constraints: BoxConstraints(
-                  minWidth: 311, 
+                   
                   maxWidth: 450,
                   minHeight: 28
                 ),
@@ -348,7 +347,7 @@ class CustomRecentWidgets extends StatelessWidget{
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Container( 
-                        width:312,
+                        width:311,
                         height: 62, 
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.all(
@@ -367,7 +366,7 @@ class CustomRecentWidgets extends StatelessWidget{
                                 Radius.circular(12),
                               )
                               ),
-                              width: 52,
+                              width: 62,
                               height: 52,
                               child: Icon(
                                 Icons.picture_as_pdf , 
@@ -385,28 +384,20 @@ class CustomRecentWidgets extends StatelessWidget{
                         ),
                       ),
                     ), 
-
-
+                            Container(
+                              width: 24, 
+                               height: 24,
+                              decoration: BoxDecoration(
+                                border: Border.all(
+                                  width: 1 , 
+                                  color: Colors.red
+                                )
+                              ),
+                            )
                           ],
                         ),
                       ),
                     ), 
-                    
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: SizedBox( 
-                        width:34,
-                        height: 34, 
-                        child: IconButton(
-                          onPressed: (){},
-                          icon: Icon(Icons.open_in_new)
-                  
-                          ), 
-                  
-                      ),
-                    
-                    ), 
-                    
                   ],
                 ),
             ),
