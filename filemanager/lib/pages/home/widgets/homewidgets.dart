@@ -112,7 +112,7 @@ class CustomPercentProggress extends StatelessWidget {
                           CircularPercentIndicator(
                             backgroundColor: Color.fromARGB(222, 222, 222,222),
                             startAngle: 360,
-                            radius: 112.0,
+                            radius: 82.0,
                             lineWidth: 24.0,
                             animation: true, 
                             percent:0.75 ,
