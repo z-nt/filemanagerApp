@@ -33,13 +33,5 @@ final GoRouter router = GoRouter(
         return const ONLOADING();
       }
     ) , 
-
-
-
-
-
-
-
-
   ]
 );
