@@ -7,9 +7,6 @@ import 'package:filemanager/pages/home/styles/style.dart';
 
 
 class CustomSearchDelegate extends SearchDelegate {
-
-
-
 List<String>  searchTerms = [
     "Apple",
     "Banana",
@@ -20,7 +17,6 @@ List<String>  searchTerms = [
     "Pineapples",
     "Strawberries"
 ];
-
 @override
 List<Widget>? buildActions(BuildContext context){
     return[
@@ -32,8 +28,6 @@ List<Widget>? buildActions(BuildContext context){
         )
     ];
 }
-
-
   @override
   Widget buildLeading(BuildContext context) {
     return IconButton(
@@ -43,7 +37,6 @@ List<Widget>? buildActions(BuildContext context){
       icon: Icon(Icons.arrow_back)
       );
   }
-
   @override
   Widget buildResults(BuildContext context) {
     List<String> matchQuery = []; 
@@ -66,6 +59,7 @@ List<Widget>? buildActions(BuildContext context){
 
   @override
   Widget buildSuggestions(BuildContext context) {
+
      List<String> matchQuery = []; 
     for(var folder in searchTerms){
       if(folder.toLowerCase().contains(query.toLowerCase())){
@@ -91,17 +85,12 @@ class CustomPercentProggress extends StatelessWidget {
   Widget build(BuildContext context) {
 
         return Expanded(
-          child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
                       child: SizedBox(
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             SizedBox(
-                                width: 322, 
-                                height: 38,
+                                width: 375, 
                                   child: Text(
                                     "289GB\nFree" , 
                                     textAlign: TextAlign.left, 
@@ -112,7 +101,7 @@ class CustomPercentProggress extends StatelessWidget {
                           CircularPercentIndicator(
                             backgroundColor: Color.fromARGB(222, 222, 222,222),
                             startAngle: 360,
-                            radius: 82.0,
+                            radius: 102.0,
                             lineWidth: 24.0,
                             animation: true, 
                             percent:0.75 ,
@@ -128,8 +117,7 @@ class CustomPercentProggress extends StatelessWidget {
                             progressColor: Colors.purple,
                           ), 
                            SizedBox(
-                                width: 322, 
-                                height: 38,
+                                width: 375, 
                                   child: Text(
                                     "785GB\nused" , 
                                     textAlign: TextAlign.right,
@@ -138,10 +126,8 @@ class CustomPercentProggress extends StatelessWidget {
                               ),
                           ] 
                         ),
-                      ),
-                    ),
-        )
-        );
+                      )
+        );                
   }
 }
 
@@ -387,12 +373,7 @@ class CustomRecentWidgets extends StatelessWidget{
                             Container(
                               width: 24, 
                                height: 24,
-                              decoration: BoxDecoration(
-                                border: Border.all(
-                                  width: 1 , 
-                                  color: Colors.red
-                                )
-                              ),
+                              decoration: BoxDecoration(),
                             )
                           ],
                         ),

@@ -1,4 +1,5 @@
 
+import "package:filemanager/pages/cloud/cloud.dart";
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -8,9 +9,8 @@ import "package:filemanager/pages/onloading/onloading.dart";
 
 
 final GoRouter router = GoRouter(
-    initialLocation: "/onloading",
+    initialLocation: "/home",
   routes: <RouteBase>[
-    
     GoRoute(
       path: "/home",
       name: "home",
@@ -18,7 +18,6 @@ final GoRouter router = GoRouter(
         return const HOMEPAGE();
       }
     ) , 
-
     GoRoute(
       path: "/files",
       name: "files",
@@ -31,6 +30,13 @@ final GoRouter router = GoRouter(
       name: "onloading",
       builder: (BuildContext context ,  state ){
         return const ONLOADING();
+      }
+    ) , 
+    GoRoute(
+      path: "/cloud",
+      name: "cloud",
+      builder: (BuildContext context ,  state ){
+        return const Cloud();
       }
     ) , 
   ]

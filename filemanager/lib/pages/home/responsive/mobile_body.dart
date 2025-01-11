@@ -1,6 +1,7 @@
 import "package:flutter/material.dart"; 
 import "package:filemanager/pages/home/styles/style.dart";
 import "package:filemanager/pages/home/widgets/homewidgets.dart";
+import "package:go_router/go_router.dart";
 
 
 class MobileBody extends StatelessWidget {
@@ -9,8 +10,9 @@ class MobileBody extends StatelessWidget {
   Widget build(BuildContext context) {
       
    return Container(
-    width: 375, 
-    height: 667,
+      constraints: BoxConstraints(
+        minWidth: 375
+      ),
      child: Scaffold(
       backgroundColor: Color.fromARGB(251, 251, 251, 251),
          appBar: AppBar(
@@ -38,30 +40,25 @@ class MobileBody extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-                    // Padding(
-                    //   padding: const EdgeInsets.all(8.0),
-                    //   child: CustomPercentProggress(),
-                    // ),  
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
+                    Container(
+                        decoration: BoxDecoration(),
+                        child:  CustomPercentProggress(),
+                      ),
+                    Container(
                         height:164,
                         decoration: BoxDecoration(),
                         child: CustomCategory(),
                       ),
-                    ) , 
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
+                
+                   Container(
                         height: 164,
-                        decoration: BoxDecoration(),
+                        decoration: BoxDecoration(
+                         
+                        ),
                         child: CustomRecentWidgets(),
                       ),
-                    ), 
      
-                    Padding(
-                      padding: const EdgeInsets.all(0.0),
-                      child: Container(
+                  Container(
                         height: 64,
                         decoration: BoxDecoration(
                           color: Colors.white, 
@@ -72,24 +69,34 @@ class MobileBody extends StatelessWidget {
                           )
                         ),
                         child: BottomNavigationBar(
-                         
-                          items:const <BottomNavigationBarItem>[
+                          items:<BottomNavigationBarItem>[
                             BottomNavigationBarItem(
                               icon: Icon(Icons.home),
                               label: "Home"
                             ), 
                             BottomNavigationBarItem(
                               icon: Icon(Icons.file_copy),
-                              label: "Files"
-                              ), 
+                              label: "Files", 
+                            ), 
+                          
                             BottomNavigationBarItem(
                               icon: Icon(Icons.cloud), 
                               label: "Cloud"
                               ), 
                       ],
+                      onTap:(i){
+                        if(i == 0) {
+                          context.go("/home");
+                        }
+                        if(i == 1) {
+                          context.go("/files");
+                        }
+                        if(i == 2) {
+                          context.go("/cloud");
+                        }
+                      } ,
                     ),
                   ),
-                ), 
               ],
         ),
       ),

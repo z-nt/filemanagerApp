@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-
 import "package:go_router/go_router.dart";
 
-class Files extends StatelessWidget{
+
+class Cloud extends StatelessWidget{
   
-  const Files ({super.key});
+  const Cloud ({super.key});
   
   @override
 
   Widget build(BuildContext context) {
       return Scaffold(
         body: Center(
-          child: 
-                  Container(
+          child:
+            Container(
                         height: 64,
                         decoration: BoxDecoration(
                           color: Colors.white, 
@@ -51,7 +51,6 @@ class Files extends StatelessWidget{
                       } ,
                     ),
                   ),
-
         ),
       );
   }
