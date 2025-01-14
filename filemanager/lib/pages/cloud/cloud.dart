@@ -2,6 +2,12 @@ import 'package:flutter/material.dart';
 import "package:go_router/go_router.dart";
 
 
+void perimishon (){
+
+}
+
+
+
 class Cloud extends StatelessWidget{
   
   const Cloud ({super.key});
