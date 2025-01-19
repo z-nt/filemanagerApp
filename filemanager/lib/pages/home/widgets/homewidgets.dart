@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:filemanager/pages/home/styles/style.dart';
@@ -100,7 +101,7 @@ class CustomPercentProggress extends StatelessWidget {
                             
                           CircularPercentIndicator(
                             backgroundColor: Color.fromARGB(222, 222, 222,222),
-                            startAngle: 360,
+                            startAngle: 160,
                             radius: 102.0,
                             lineWidth: 24.0,
                             animation: true, 
@@ -132,7 +133,14 @@ class CustomPercentProggress extends StatelessWidget {
 }
 
 
-class CustomCategory extends StatelessWidget {
+class CustomCategory extends StatefulWidget {
+  @override
+  State<CustomCategory> createState() => _CustomCategoryState();
+}
+
+class _CustomCategoryState extends State<CustomCategory> {
+  String image = " ";
+
 @override
   Widget build(BuildContext context) {
       return Scaffold(
@@ -196,7 +204,9 @@ class CustomCategory extends StatelessWidget {
                                 minWidth: 64, 
                                 minHeight: 64 , 
                               ),
-                                onPressed: (){}, 
+                                onPressed:(){
+                                  
+                                },
                                 icon: Icon(Icons.image), 
                                 color: Colors.lightBlue, 
                                 iconSize: 38,
